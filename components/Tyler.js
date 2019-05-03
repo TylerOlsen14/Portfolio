@@ -3,14 +3,14 @@ const url="../assets/T.OlsenMay2.pdf";
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-let pdfDoc = null, 
-  pageNum = 1,
-  pageIsRendering = false,
-  pageNumIsPending = null;
+let pdfDoc = null; 
+let pageNum = 1;
+let pageIsRendering = false;
+let pageNumIsPending = null;
 
-const scale = 1,
-  canvas = document.querySelector('#pdf-render'),
-  ctx = canvas.getContext('2d');
+const scale = 1;
+const canvas = document.querySelector('#pdf-render');
+const ctx = canvas.getContext('2d');
 
 // Render the page info
 const renderPage = num => {
